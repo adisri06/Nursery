@@ -1,0 +1,39 @@
+/* PlantShopping.css */
+
+.plant-shopping-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #e0f7fa, #aed581);
+    padding: 20px;
+  }
+  
+  .plant-shopping-header {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .plant-shopping-title {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+  }
+  
+  .plant-shopping-description {
+    font-size: 1.2rem;
+    color: #455a64;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Adding subtle hover effect on container */
+  .plant-shopping-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+  }
