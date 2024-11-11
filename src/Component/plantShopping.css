@@ -1,39 +1,207 @@
 /* PlantShopping.css */
 
+/* Plant Shopping Container */
 .plant-shopping-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensures content is centered vertically and horizontally */
+  padding: 40px 20px;
+  background-color: rgba(245, 255, 245, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0;
+  position: relative; /* Ensures it stays within the full screen */
+}
+
+/* Header Section */
+.plant-shopping-header {
+  margin: 0;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Align content at the top */
+  align-items: center; /* Horizontally center the title and description */
+  position: absolute; /* Position it at the top of the page */
+  top: 0; /* Ensure it stays at the top */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6); /* Optional background for separation */
+  z-index: 10; /* Ensures it stays above other content */
+}
+
+.plant-shopping-title {
+  font-size: 48px; /* Large font size */
+  color: #4c9f70; /* Nature-inspired green */
+  font-weight: bold; /* Bold text */
+  margin: 0; /* Remove any default margin */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for readability */
+}
+
+/* Description Section */
+.plant-shopping-description {
+  font-size: 18px;
+  color: #3c6e3c;
+  text-align: center;
+  width: 100%; /* Ensure the description takes full width of the container */
+  max-width: 700px; /* Maximum width constraint */
+  margin-top: 20px; /* Space between title and description */
+  padding: 0 20px; /* Add padding for small spacing from edges */
+}
+
+/* Plant Cards Section */
+.plant-cards-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 100%; /* Ensure it takes up the full width */
+  max-width: 1200px; /* Optional, to limit the size on larger screens */
+  margin: 0 auto;
+}
+
+/* Individual Plant Card */
+.plant-card {
+  width: 280px;
+  border: 2px solid #d1e7d1;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plant-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling for Cards */
+.plant-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Card Content Section */
+.plant-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.plant-card-title {
+  font-size: 22px;
+  color: #2f4f2f;
+  margin-bottom: 10px;
+}
+
+.plant-card-description {
+  font-size: 16px;
+  color: #556b2f;
+  line-height: 1.5;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .plant-cards-container {
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(135deg, #e0f7fa, #aed581);
-    padding: 20px;
+    align-items: center;
   }
-  
-  .plant-shopping-header {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+
+  .plant-card {
+    width: 90%;
+    margin-bottom: 20px;
   }
-  
-  .plant-shopping-title {
-    font-size: 2.5rem;
-    color: #2e7d32;
-    margin-bottom: 15px;
-  }
-  
-  .plant-shopping-description {
-    font-size: 1.2rem;
-    color: #455a64;
-    line-height: 1.5;
-    margin: 0;
-  }
-  
-  /* Adding subtle hover effect on container */
-  .plant-shopping-container:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
-  }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* Darken the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Modal Content */
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff; /* White background for the modal */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  text-align: center;
+  width: 80%;
+  color: #2e7d32; /* Dark green text color for readability */
+  font-family: 'Arial', sans-serif; /* Simple, clean font */
+}
+
+/* Modal Heading */
+.modal-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #388e3c; /* Dark green for the title */
+  margin-bottom: 15px;
+}
+
+/* Modal Paragraph */
+.modal-content p {
+  font-size: 18px;
+  color: #1b5e20; /* Slightly darker green for the text */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Modal Button */
+.modal-content button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #66bb6a; /* Soft green button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #43a047; /* Darker green for hover effect */
+}
