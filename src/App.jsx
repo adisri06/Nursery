@@ -4,6 +4,7 @@ import "./App.css";
 import NavBar from "./Component/navigation";
 import PlantShopping from "./Component/PlantShopping";
 import Cart from "./Component/cart"; // Assume Cart component exists
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
                     <strong>Why plants?</strong> Not only do they bring beauty, but they purify the air, reduce stress, and boost your well-being. 🌍💚
                   </p>
                   <div className="getstarted_btn">
-                    <a href="/plantation" className="get-started-btn">
+                    <Link to="/plantation" className="get-started-btn">
                       Explore the Nursery
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
