@@ -39,8 +39,14 @@ export const medicinalSlice = createSlice({
             state[index].quantity--;
           }
         },
+        deleteItem: (state, action) => {
+          const { payload: index } = action;
+          if (state[index]) {
+            state[index].quantity = 0; // This sets the quantity to 0
+          }
+        },  
       },     
 })
 
-export const { incrementQuantity, decrementQuantity } = medicinalSlice.actions;
+export const { incrementQuantity, decrementQuantity,deleteItem } = medicinalSlice.actions;
 export default medicinalSlice.reducer

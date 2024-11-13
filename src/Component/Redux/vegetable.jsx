@@ -59,7 +59,13 @@ export const vegetableSlice = createSlice({
             state[index].quantity--;
           }
         },
+        deleteItem: (state, action) => {
+          const { payload: index } = action;
+          if (state[index]) {
+            state[index].quantity = 0;
+          }
+        },
       },
 });
-export const { incrementQuantity, decrementQuantity } = vegetableSlice.actions;
+export const { incrementQuantity, decrementQuantity, deleteItem } = vegetableSlice.actions;
 export default vegetableSlice.reducer;
