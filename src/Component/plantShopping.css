@@ -162,7 +162,8 @@
 
 .modal-plant-card img {
   max-width: 100%;
-  height: auto;
+  height: 150px; /* Set a fixed height as needed */
+  object-fit: cover; /* Ensures image maintains aspect ratio and covers the specified height */
   border-radius: 4px;
   margin-bottom: 8px;
 }
@@ -239,6 +240,13 @@
   border: 1px solid #2e7d32; /* Border matching the text color */
   text-align: center; /* Center align the text */
   display: inline-block; /* Make it fit content width */
+}
+.total-cost-text {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 15px;
 }
 .modal-close-button {
   background-color: #388e3c; /* Stylish green color */
